@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnchar_fd.c                                   :+:      :+:    :+:   */
+/*   ft_uitoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaythaw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/15 10:41:05 by mmaythaw          #+#    #+#             */
-/*   Updated: 2022/03/16 15:45:05 by mmaythaw         ###   ########.fr       */
+/*   Created: 2022/03/16 12:48:27 by mmaythaw          #+#    #+#             */
+/*   Updated: 2022/03/16 13:02:07 by mmaythaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_putnchar_fd(char c, int fd, int n)
+char	*ft_uitoa(unsigned int n)
 {
-	int	count;
+	char	*str;
+	int		len;
 
-	count = 0;
-	while (n-- > 0)
-		count += write(fd, &c, 1);
-	return (count);
+	len = ft_numlen_base(n, 10);
+	str = (char *)malloc((len + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	while (--len >= 0)
+	{
+		str[len] = (n % 10) + '0';
+		n /= 10;
+	}
+	return (str);
 }

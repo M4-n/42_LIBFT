@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnchar_fd.c                                   :+:      :+:    :+:   */
+/*   ft_numlen_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaythaw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/15 10:41:05 by mmaythaw          #+#    #+#             */
-/*   Updated: 2022/03/16 15:45:05 by mmaythaw         ###   ########.fr       */
+/*   Created: 2022/03/16 12:48:42 by mmaythaw          #+#    #+#             */
+/*   Updated: 2022/03/16 13:03:36 by mmaythaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_putnchar_fd(char c, int fd, int n)
+int	ft_numlen_base(long n, int base)
 {
-	int	count;
+	int	len;
 
-	count = 0;
-	while (n-- > 0)
-		count += write(fd, &c, 1);
-	return (count);
+	len = 0;
+	if (n <= 0)
+		len++;
+	while (n != 0)
+	{
+		n /= base;
+		len++;
+	}
+	return (len);
 }

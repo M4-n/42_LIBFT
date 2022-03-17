@@ -6,7 +6,7 @@
 /*   By: mmaythaw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 09:46:40 by mmaythaw          #+#    #+#             */
-/*   Updated: 2022/03/15 11:00:50 by mmaythaw         ###   ########.fr       */
+/*   Updated: 2022/03/16 14:46:28 by mmaythaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ char	**ft_split(const char *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strdup(const char *s1);
+char	*ft_uitoa(unsigned int n);
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -69,5 +70,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *str);
 int		ft_lstsize(t_list *lst);
 int		ft_putnchar_fd(char c, int fd, int n);
+int		ft_numlen_base(long n, int base);
+int		ft_putlstr_fd(char *s, int fd, int len);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: mmaythaw <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/17 11:40:25 by mmaythaw          #+#    #+#              #
-#    Updated: 2022/03/15 11:55:54 by mmaythaw         ###   ########.fr        #
+#    Updated: 2022/03/17 11:07:42 by mmaythaw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,11 +23,6 @@ CYAN = \033[0;96m
 WHITE = \033[0;97m
 
 SHELL=/bin/bash
-UNAME = $(shell uname -s)
-PRINTF = echo
-ifeq ($(UNAME), Linux)
-	PRINTF = echo -e
-endif
 
 # VARIABLES
 
@@ -53,7 +48,7 @@ SRCM = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	  	ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 	  	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-SRCA = ft_putnchar_fd.c
+SRCA = ft_putnchar_fd.c ft_numlen_base.c ft_uitoa.c ft_putlstr_fd.c
 
 SRCB = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c

@@ -6,7 +6,7 @@
 #    By: mmaythaw <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/17 11:40:25 by mmaythaw          #+#    #+#              #
-#    Updated: 2022/03/17 11:07:42 by mmaythaw         ###   ########.fr        #
+#    Updated: 2022/03/22 07:50:10 by mmaythaw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,14 +22,12 @@ MAGENTA = \033[0;95m
 CYAN = \033[0;96m
 WHITE = \033[0;97m
 
-SHELL=/bin/bash
-
 # VARIABLES
 
 NAME = libft.a
 HEADER = libft.h
 PRINTF = LC_NUMERIC="en_US.UTF-8" printf
-CC = gcc -MD
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
